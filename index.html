@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Shopping App</h1>
+
+        <h2>Add New Item</h2>
+        <form id="add-item-form">
+            <input type="text" id="item-name" placeholder="Item Name" required>
+            <input type="number" id="item-price" placeholder="Item Price" step="0.01" min="0" required>
+            <button type="submit">Add Item</button>
+        </form>
+        
+        <div id="item-list" class="items">
+            <div class="item">
+                <h3>Mouse</h3>
+                <p>$15.00</p>
+                <button class="add-to-cart" data-name="Mouse" data-price="15">Add to Cart</button>
+            </div>
+            <div class="item">
+                <h3>Keyboard</h3>
+                <p>$20.00</p>
+                <button class="add-to-cart" data-name="Keyboard" data-price="20">Add to Cart</button>
+            </div>
+            <div class="item">
+                <h3>Monitor</h3>
+                <p>$55.00</p>
+                <button class="add-to-cart" data-name="Monitor" data-price="55">Add to Cart</button>
+            </div>
+        </div>
+
+        <h2>Your Cart</h2>
+        <div id="cart">
+            <p>No items in cart.</p>
+        </div>
+
+        <h3>Total: $<span id="total">0.00</span></h3>
+        <button id="clear-cart">Empty Cart</button> <!-- Clear Cart Button -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
