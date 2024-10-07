@@ -1,4 +1,4 @@
-// Get cart and total elements
+// Retrieve cart and total elements
 const cart = document.getElementById("cart");
 const totalDisplay = document.getElementById("total");
 const itemList = document.getElementById("item-list");
@@ -10,7 +10,7 @@ const clearCartButton = document.getElementById("clear-cart");
 let cartItems = [];
 let total = 0;
 
-// Function to update the cart display
+// Function to update the cart
 function updateCart() {
   // Clear the cart content
   cart.innerHTML = "";
@@ -29,11 +29,11 @@ function updateCart() {
     cart.appendChild(ul);
   }
 
-  // Update the total price display
+  // Update the total price
   totalDisplay.textContent = total.toFixed(2);
 }
 
-// Function to add an item to the cart
+// func to add an item to the cart
 function addToCart(event) {
   const clicker = event.target;
   const itemName = clicker.getAttribute("data-name");
@@ -48,7 +48,7 @@ function addToCart(event) {
   // Update the cart display
   updateCart();
 }
-// Function to add a new item to the available items list
+// func to add a new item to the current items list
 function addNewItem(event) {
   event.preventDefault(); // Prevent form submission
 
@@ -59,7 +59,7 @@ function addNewItem(event) {
   const itemDiv = document.createElement("div");
   itemDiv.classList.add("item");
 
-  // Add the name and price
+  // Assign the name and price to item
   const itemNameElement = document.createElement("h3");
   itemNameElement.textContent = itemName;
   const itemPriceElement = document.createElement("p");
